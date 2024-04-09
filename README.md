@@ -8,7 +8,7 @@
 
 配套QQ小程序源代码：[https://github.com/BlockCnFuture/zhu_guild_robot_miniapp](https://github.com/BlockCnFuture/zhu_guild_robot_miniapp)
 
-**注意：** 本程序在高并发下，bull或mysql查询存在死锁问题（还没具体排查是谁的问题），个人使用没问题，给出的建议：升级bull队列库，或者改成更高效的[bee-queue](https://github.com/bee-queue/bee-queue)、检查使用了`SELECT ... FOR UPDATE`语句的查询函数，检查在获取连接后，是否主动释放了连接回连接池
+**注意：** 本程序在高并发下，bull或mysql查询存在死锁问题（还没具体排查是谁的问题），个人使用没问题，商用的话不支持太高的并发，给出的建议：升级bull队列库，或者改成更高效的[bee-queue](https://github.com/bee-queue/bee-queue)、检查使用了`SELECT ... FOR UPDATE`语句的查询函数，检查在获取连接后，是否主动释放了连接回连接池
 
 运行前准备环境：
 
