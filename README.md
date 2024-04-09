@@ -30,7 +30,7 @@ nodejs、pm2、redis、mysql8.0(或以上)、chromium浏览器
 
 故障重启：
 
-`npx pm2 restart app.js --name 消费者`
+`npx pm2 restart 消费者`
 
 停机维护：
 
