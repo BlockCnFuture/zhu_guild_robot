@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 620px;
+    color: #1e1f20;
+    transform: scale(1.5);
+    transform-origin: 0 0;
+}
+
+.container {
+    width: 620px;
+    padding: 0px 15px 10px 15px;
+    background-color: #f5f6fb;
+}
+
+.ext {
+    left: -15px;
+    width: 620px;
+    position: relative;
+}
+
+.ext .image {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3CforeignObject width='100%25' height='100%25'%3E%3Cbody class='wrap' xmlns='http://www.w3.org/1999/xhtml'%3E%3Cstyle%3E.wrap%7Bbox-sizing:border-box;margin:0;height:100%25;padding:10px%7D.shadow%7Bheight:100%25;background:%23000;box-shadow:0 0 5px %23000,0 0 10px %23000,0 0 15px %23000%7D%3C/style%3E%3Cdiv class='shadow'/%3E%3C/body%3E%3C/foreignObject%3E%3C/svg%3E")
+}
+
+.ext .image_qr {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    left: 510px;
+    top: 240px;
+    position: absolute;
+}
+
+    .ext .etxt {
+        font-size: 30px;
+        text-align: center;
+        color: #000000;
+        left: 1023px;
+        top: 422px;
+        position: absolute;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    .ext .etxt1 {
+        font-size: 30px;
+        text-align: center;
+        color: #000000;
+        left: 20px;
+        top: 40px;
+        position: absolute;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    .ext .etxt2 {
+        font-size: 30px;
+        text-align: center;
+        color: #000000;
+        left: 20px;
+        top: 80px;
+        position: absolute;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    .ext .etxt3 {
+        font-size: 30px;
+        text-align: center;
+        color: #000000;
+        left: 31px;
+        top: 120px;
+        position: absolute;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    .ext .etxt4 {
+        font-size: 24px;
+        text-align: center;
+        color: #000000;
+        left: 66px;
+        top: 180px;
+        position: absolute;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+.data_box {
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    padding: 25px 0px 5px 0px;
+    background: #f5f6fb;
+    position: relative;
+}
+
+.tab_lable {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translate(-50%);
+    background: #6699ff;
+    color: #fff;
+    font-size: 24px;
+    padding: 3px 10px;
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+    border-radius: 15px 15px 15px 15px;
+    z-index: 20;
+}
+
+.data_line {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 14px;
+}
+
+.data_line_item {
+    width: 80px;
+    text-align: center;
+    /*margin: 0 20px;*/
+}
+
+.num {
+    font-size: 24px;
+    position: relative;
+}
+
+.data_box .lable {
+    font-size: 14px;
+    color: #7f858a;
+    line-height: 1;
+    margin-top: 3px;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.circle {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #5CACEE;
+}
+
+.list .item {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 8px 6px 8px 6px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+    margin: 0 0px 10px 10px;
+}
+
+        .list .item .icon {
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+            flex-shrink: 0;
+        }
+
+    .list .item .number {
+        position: relative;
+        top: -12px;
+        left: -9px;
+        background: #ff0000;
+        color: #fff;
+        font-size: 14px;
+        padding: 3px 10px;
+        border-radius: 0px 0px 15px 0px;
+        z-index: 20;
+    }
+
+        .list .item .title {
+            font-size: 24px;
+            margin-left: 6px;
+            line-height: 20px;
+        }
+            .list .item .title .dec {
+                font-size: 12px;
+                color: #999;
+                margin-top: 2px;
+            }
+
+.logo {
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}

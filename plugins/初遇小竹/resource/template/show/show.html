@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{resourcepath}}/template/show/show.css" />
+    <link rel="stylesheet" href="{{resourcepath}}/template/show/icon.css">
+    <title>初遇小竹 在线服务</title>
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="poster">
+            <img src="{{content.author.avatar}}" class="head" referrerpolicy="no-referrer" onclick="window.location.href='{{content.author.avatar}}'" />
+            <div class="nick text-cut" style="max-width:80%">{{content.author.username}}</div>
+            <div class="time text-cut" style="max-width:80%"> {{content.author.id}} </div>
+        </div>
+        {{if level}}
+    <div class="roles_box">
+        {{if admin=="频道主"}}
+        <text class="cu-tag radius sm bg-red">{{admin}}</text>
+        {{/if}}
+        {{if admin && admin!="频道主"}}
+        <text class="cu-tag radius sm bg-bluelight">{{admin}}</text>
+        {{/if}}
+        <text class="cu-tag radius sm bg-bluelight"><text class="cuIcon-choicenessfill"></text> LV.{{level}}</text>
+        <text class="cu-tag radius sm bg-grey"><text class="cuIcon-timefill"></text> {{enterAt}} 加入</text>
+        <text class="cu-tag radius sm bg-black"><text class="cuIcon-countdownfill"></text> 入频{{enterDays}}</text>
+    </div>
+        {{/if}}
+        {{if content.reason}}
+        <div class="reason_box">
+            <text>{{content.reason}}</text>
+        </div>
+        {{/if}}
+        <div>
+            {{if content.text}}
+            <div class="text_box">
+                <text>{{content.text}}</text>
+            </div>
+            {{/if}}
+            {{each content.imgs item index}}
+            <img src="{{item}}" class="img_box" mode="widthFix" referrerpolicy="no-referrer" onclick="window.location.href='{{item}}'" />
+            {{/each}}
+        </div>
+
+        <div>
+            {{if content.logs}}
+            <div style='margin-bottom:20px;'>处理日志：</div>
+            {{each content.logs item index}}
+            <div class="log_box">
+                <div>处理人：<image src="{{item.avatar}}" style='width:20px;height:20px;border-radius:50%;' referrerpolicy="no-referrer" onclick="window.location.href='{{item.avatar}}'" /> {{item.username}} [{{item.id}}]</div>
+                <div style='margin-top:10px;'>处理结果：{{item.deal}}</div>
+                <div style='margin-top:10px;'>处理时间：{{item.time}}</div>
+            </div>
+            {{/each}}
+            {{/if}}
+        </div>
+
+        <div class="logo">此为用户发言，不代表《初遇小竹》官方立场 </div>
+    </div>
+</body>
+
+</html>

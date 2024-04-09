@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{resourcepath}}/template/roleslist/roleslist.css" />
+</head>
+
+<body>
+    <div class="container" id="container" style="{{width}}"> 
+        <div class="list">
+
+            {{each Groups Group index}}
+            <div class="item">
+                <div class="circle" style="{{Group.color}}}"></div>
+                <div class="title">
+                    <div class="text">{{Group.name}}</div>
+                    <div class="dec"><code>{{Group.id}}</code></div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+            <div class="logo">初遇小竹 版权所有</div>
+        </div>
+</body>
+
+</html>

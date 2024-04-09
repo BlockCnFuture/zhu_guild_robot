@@ -1,0 +1,75 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 16px;
+    width: 1195px;
+    color: #1e1f20;
+    transform: scale(1.5);
+    transform-origin: 0 0;
+}
+
+.container {
+    width: 1195px;
+    padding: 10px 15px 10px 15px;
+    background-color: #f5f6fb;
+}
+
+.num {
+    font-size: 24px;
+    position: relative;
+}
+
+.list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid silver;
+}
+
+
+.list .item {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    padding: 8px 6px 8px 6px;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 15%);
+    margin: 0 0px 10px 10px;
+}
+
+    .list .item .title {
+        font-size: 22px;
+        margin-left: 6px;
+        line-height: 20px;
+        width: 214px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+        .list .item .title .dec {
+            font-size: 18px;
+            color: #0000ff;
+            margin-top: 2px;
+        }
+
+.logo {
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}

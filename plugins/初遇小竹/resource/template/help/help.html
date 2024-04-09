@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{resourcepath}}/template/help/help.css" />
+</head>
+
+<body>
+    <div class="container" id="container">
+
+        <div class="ext">
+            <img src="{{resourcepath}}/template/help/head.jpg" class="image" />
+            <!--<img src="{{resourcepath}}/template/help/qr.png" class="image_qr" />-->
+            <div class="etxt">官方频道</div>
+            <div class="etxt1">[ ]内是必要指令文本</div>
+            <div class="etxt2">( )内是非必要指令文本，可选</div>
+            <div class="etxt3"> | 表示 或 的意思</div>
+            <div class="etxt4">所有指令均可省略 艾特，可直接发送指令名<br/>更多指令请进入小程序查看</div>
+        </div>
+
+        {{each Groups Group index}}
+        <div class="data_box">
+            <div class="tab_lable">{{Group.name}}</div>
+            <div class="list">
+                {{each Group.commands command i}}
+                <div class="item">
+                    <div class="number">{{i+1}}</div>
+                    {{if command.icon}}
+                    <div class="icon"><img src="{{resourcepath}}/icon/{{command.icon}}"/></div>
+                    {{/if}}
+                    <div class="title">
+                        <div class="text">{{command.text}}</div>
+                        {{if command.dec}}
+                        <div class="dec">{{command.dec}}</div>
+                        {{/if}}
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/each}}
+        <div class="logo">初遇小竹 版权所有</div>
+    </div>
+</body>
+
+</html>

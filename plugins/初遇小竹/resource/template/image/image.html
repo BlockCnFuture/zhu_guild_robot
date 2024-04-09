@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="{{resourcepath}}/template/image/image.css" />
+</head>
+
+<body>
+    <div class="container" id="container">
+
+        {{each Groups Group index}}
+
+        {{if Group.poster}}
+        <div class="poster">
+            <img src="{{Group.poster.head}}" class="head" />
+            <div class="nick">{{Group.poster.nick}}</div>
+            <div class="time">{{Group.poster.time}}</div>
+        </div>
+        {{/if}}
+
+        {{if Group.text}}
+        <div class="text_box">{{@Group.text}}</div>
+        {{/if}}
+
+        {{if Group.url}}
+        <img src="{{Group.url}}" class="img_box" referrerpolicy="no-referrer" />
+        {{/if}}
+
+        {{/each}}
+
+        <div class="logo">初遇小竹频管 官方频道：<a href="https://pd.qq.com/s/9obasyak2">红叶竹林</a></div>
+
+    </div>
+</body>
+
+</html>
